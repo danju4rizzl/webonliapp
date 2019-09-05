@@ -1,0 +1,23 @@
+@import "../basics/Basics.scss";
+
+.header {
+  position: relative;
+  background-image: url("../img/bg.svg");
+  background-size: cover;
+  background-position: bottom;
+
+  &__inner {
+    align-items: flex-end;
+    @include absolute_center_element;
+
+    &-left {
+      display: grid;
+    }
+    &-right {
+      display: grid;
+    }
+  }
+  &__img {
+    max-width: 40rem;
+  }
+}

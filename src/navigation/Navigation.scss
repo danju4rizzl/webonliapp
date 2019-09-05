@@ -1,0 +1,46 @@
+@import "../basics/Basics.scss";
+
+.navigation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 6rem;
+
+  &__logo {
+    max-width: 3rem;
+
+    &-item {
+      & > img {
+        width: 12rem;
+      }
+    }
+  }
+
+  &__contact {
+    &-link {
+      font-size: 1.2rem;
+      font-weight: 700;
+      @include gradient_text();
+    }
+  }
+
+  &__links {
+    & > ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+    }
+
+    & ul > li:not(:last-child) {
+      margin-right: 4.5rem;
+    }
+    & > ul > li > a {
+      font-size: 1.4rem;
+      color: $color_primary;
+
+      .active {
+        font-weight: 500;
+      }
+    }
+  }
+}
