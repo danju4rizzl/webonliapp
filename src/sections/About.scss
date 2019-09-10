@@ -3,11 +3,20 @@
   background-image: url(../img/bg--1.svg);
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
 
   &__inner {
     // display: flex;
 
     &-left {
+      display: grid;
+      grid-gap: 3rem;
+      justify-items: start;
+
+      .box--2 {
+        display: grid;
+        justify-self: center;
+      }
     }
     &-right {
       display: grid;

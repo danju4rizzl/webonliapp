@@ -5,6 +5,7 @@ $color_primary_dark: #219653;
 
 $color_white: #f2f2f2;
 $color_black: #2d2d2d;
+$color_gray: lightslategray;
 
 // #### Font Family  #####
 $font_main: "Lato", sans-serif;
@@ -71,7 +72,7 @@ $size_3: 3rem;
   &__main {
     font-size: 1.5rem;
     font-family: $font_main;
-    color: lightslategray;
+    color: $color_gray;
   }
 }
 

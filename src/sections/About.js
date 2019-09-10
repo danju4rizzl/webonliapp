@@ -1,28 +1,43 @@
 import React from "react";
 import Statistics from "../components/Statistics";
 import { Container, Row, Col } from "react-bootstrap";
-
+import Box from "../components/Box";
 import "./About.scss";
+import { BoxTextContents } from "../basics/Basics";
 
 function About() {
+  const { box1, box2, box3 } = BoxTextContents;
+
   return (
     <div className="about section">
       <Container>
         <Row>
-          <Col lg={6}>
+          <Col lg={{ span: 6 }}>
             <div className="about__inner-left">
-              <div className="steps steps--1">
-                <h3 className="heading__sub">1</h3>
-                <h4 className="heading__title">Professional support</h4>
-                <p className="text__main">
-                  Danjuma You stoped here bro, Thank God, for making it this
-                  far.... Jesus is the Lamb, no amnisia
-                </p>
-              </div>
+              <Box
+                boxIndex={box1.boxIndex}
+                title={box1.title}
+                text={box1.text}
+                boxClass="box--1"
+              />
+
+              <Box
+                boxIndex={box2.boxIndex}
+                title={box2.title}
+                text={box2.text}
+                boxClass="box--2"
+              />
+
+              <Box
+                boxIndex={box3.boxIndex}
+                title={box3.title}
+                text={box3.text}
+                boxClass="box--3"
+              />
             </div>
           </Col>
 
-          <Col lg={5}>
+          <Col lg={{ span: 5 }}>
             <h2 className="heading__section">About us</h2>
             <div className="about__inner-right">
               <div className="about__inner-right__heading">

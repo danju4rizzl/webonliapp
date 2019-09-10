@@ -21,7 +21,7 @@ export class Navigation extends Component {
       const list = [
         <li key={link}>
           <a
-            href="#"
+            href="/"
             onClick={this.toggleClick()}
             ref={el => {
               el === "Home" ? console.log(el) : console.log(`not ${el}`);

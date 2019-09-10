@@ -5,6 +5,7 @@
   background-image: url("../img/bg.svg");
   background-size: cover;
   background-position: bottom;
+  background-attachment: fixed;
 
   &__inner {
     align-items: flex-end;
@@ -18,6 +19,7 @@
     }
   }
   &__img {
-    max-width: 40rem;
+    min-width: 40rem;
+    max-width: 80rem;
   }
 }
