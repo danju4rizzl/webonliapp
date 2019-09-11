@@ -1,0 +1,10 @@
+.statistics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  &__counter {
+    .count {
+      font-size: 2.5rem;
+    }
+  }
+}

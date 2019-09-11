@@ -5,6 +5,8 @@ import Box from "../components/Box";
 import "./About.scss";
 import { BoxTextContents } from "../basics/Basics";
 
+import ScrollAnimation from "react-animate-on-scroll";
+
 function About() {
   const { box1, box2, box3 } = BoxTextContents;
 
@@ -12,28 +14,33 @@ function About() {
     <div className="about section">
       <Container>
         <Row>
+          {/* Here We are using span in the colum to controle the role with react-bootstrap it can also take in and offset property */}
           <Col lg={{ span: 6 }}>
             <div className="about__inner-left">
-              <Box
-                boxIndex={box1.boxIndex}
-                title={box1.title}
-                text={box1.text}
-                boxClass="box--1"
-              />
-
-              <Box
-                boxIndex={box2.boxIndex}
-                title={box2.title}
-                text={box2.text}
-                boxClass="box--2"
-              />
-
-              <Box
-                boxIndex={box3.boxIndex}
-                title={box3.title}
-                text={box3.text}
-                boxClass="box--3"
-              />
+              <ScrollAnimation animateIn="flipInX">
+                <Box
+                  boxIndex={box1.boxIndex}
+                  title={box1.title}
+                  text={box1.text}
+                  boxClass="box--1"
+                />
+              </ScrollAnimation>
+              <ScrollAnimation animateIn="flipInX">
+                <Box
+                  boxIndex={box2.boxIndex}
+                  title={box2.title}
+                  text={box2.text}
+                  boxClass="box--2"
+                />
+              </ScrollAnimation>
+              <ScrollAnimation animateIn="flipInX">
+                <Box
+                  boxIndex={box3.boxIndex}
+                  title={box3.title}
+                  text={box3.text}
+                  boxClass="box--3"
+                />
+              </ScrollAnimation>
             </div>
           </Col>
 

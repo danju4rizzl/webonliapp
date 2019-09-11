@@ -1,4 +1,5 @@
 import React from "react";
+import "animate.css/animate.min.css";
 
 import Homepage from "./hompage/Homepage";
 

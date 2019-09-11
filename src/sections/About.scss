@@ -13,7 +13,7 @@
       grid-gap: 3rem;
       justify-items: start;
 
-      .box--2 {
+      & > :nth-child(2) {
         display: grid;
         justify-self: center;
       }
