@@ -1,0 +1,21 @@
+@import "../basics/Basics.scss";
+
+.bubble {
+  // background: #3ad1be;
+
+  display: inline-block;
+  min-width: 10rem;
+  min-height: 10rem;
+
+  position: relative;
+  border-radius: 100px;
+  padding: 3rem;
+
+  & svg {
+    @include absolute_center_element();
+    min-width: 2rem;
+    max-width: 5rem;
+    width: 100%;
+    fill: $color_white;
+  }
+}

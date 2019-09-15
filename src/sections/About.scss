@@ -2,8 +2,8 @@
   padding-top: 8rem;
   background-image: url(../img/bg--1.svg);
   background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background-position: bottom;
+  height: 95vh;
 
   &__inner {
     // display: flex;
@@ -21,9 +21,9 @@
     &-right {
       display: grid;
       grid-gap: 1.5rem;
+      margin-top: 8rem;
 
       &__heading {
-        margin: 1.5rem auto;
       }
       &__text {
       }

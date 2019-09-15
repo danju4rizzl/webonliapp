@@ -6,7 +6,6 @@ import robot from "../img/robot.svg";
 import programming from "../img/programming.svg";
 
 import "./Services.scss";
-import { red } from "ansi-colors";
 
 export class Services extends Component {
   render() {

@@ -1,17 +1,18 @@
 import React from "react";
 import Statistics from "../components/Statistics";
 import { Container, Row, Col } from "react-bootstrap";
-import Box from "../components/Box";
-import "./About.scss";
 import { BoxTextContents } from "../basics/Basics";
-
+import Box from "../components/Box";
+import Services from "../sections/Services";
 import ScrollAnimation from "react-animate-on-scroll";
+
+import "./About.scss";
 
 function About() {
   const { box1, box2, box3 } = BoxTextContents;
 
   return (
-    <div className="about section">
+    <div className="about ">
       <Container>
         <Row>
           {/* Here We are using span in the colum to controle the role with react-bootstrap it can also take in and offset property */}
@@ -45,10 +46,15 @@ function About() {
           </Col>
 
           <Col lg={{ span: 5 }}>
-            <h2 className="heading__section">About us</h2>
+            <h2 className="heading__section heading__section--about ">
+              About us
+            </h2>
             <div className="about__inner-right">
               <div className="about__inner-right__heading">
-                <h1 className="heading__main">We are the best in you city</h1>
+                <h1 className="heading__main">
+                  We are the best
+                  <span className="heading__main-sub">in you city</span>
+                </h1>
               </div>
 
               <div className="about__inner-right__text">
@@ -65,6 +71,7 @@ function About() {
           </Col>
         </Row>
       </Container>
+      <Services />
     </div>
   );
 }

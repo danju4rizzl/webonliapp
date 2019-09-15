@@ -3,7 +3,7 @@ $color_primary: #27ae60;
 $color_primary_light: #6fcf97;
 $color_primary_dark: #219653;
 
-$color_white: #f2f2f2;
+$color_white: #fff;
 $color_black: #2d2d2d;
 $color_gray: lightslategray;
 
@@ -40,18 +40,21 @@ $size_3: 3rem;
 .heading {
   &__main {
     font-family: $font_sub_1;
-    font-size: 4rem;
+    font-size: 4.5rem;
     font-weight: 800;
-    color: $color_primary_dark;
+
+    &-sub {
+      color: $color_primary;
+      display: block;
+    }
   }
   &__section {
     font-family: $font_sub_1;
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     font-weight: 600;
     text-transform: uppercase;
     position: relative;
     display: inline-block;
-    right: -10.5%;
     color: $color_primary_dark;
 
     &::before {
@@ -59,18 +62,34 @@ $size_3: 3rem;
       content: "";
       top: 50%;
       left: 50%;
-      transform: translate(-250%, -50%);
+      transform: translate(-190%, -50%);
       display: block;
       width: 70%;
       height: 0.1rem;
       background: currentColor;
     }
+
+    &--about {
+      right: -10.5%;
+    }
+    &--services {
+      &::before {
+        display: none;
+      }
+    }
+  }
+  &__card {
+    font-size: 3.5rem;
+    line-height: 44px;
+    font-family: $font_sub_1;
+    font-weight: bold;
+    line-height: 90px;
   }
 }
 
 .text {
   &__main {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-family: $font_main;
     color: $color_gray;
   }

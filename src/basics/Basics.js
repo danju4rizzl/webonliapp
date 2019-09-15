@@ -1,5 +1,5 @@
 export const headerText = {
-  headingText: "Best Design for Your Brands",
+  headingText: "Best Design for",
   headerSlug:
     " Lorem ipsum dolor sit amet consectetur adipisicing eli amet consectetur adipisicing eli amet consectetur adipisicing elit"
 };
@@ -45,4 +45,9 @@ export let BoxTextContents = {
     text:
       "We capitalize on low hanging fruit to identify value added activity to beta test. "
   }
+};
+
+// SVGs
+export const BrandImages = {
+  headerImg: "entrepreneurs.svg"
 };

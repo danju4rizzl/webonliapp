@@ -4,14 +4,14 @@
   background: white;
   padding: 1.5rem 2rem;
   display: grid;
+  margin: 2rem auto;
 
-  width: 33rem;
-  height: 13rem;
-  justify-content: center;
+  width: 30rem;
+  height: 14rem;
   border-radius: 5px;
   position: relative;
   box-shadow: 1px 5px 25px rgba($color_primary_light, 0.8);
-  justify-content: center;
+
   text-align: center;
   border: none;
   &--1 {
@@ -22,7 +22,7 @@
   }
 
   &__heading {
-    font-size: 4.5rem;
+    font-size: 5.5rem;
     font-weight: 600;
     font-family: $font_main;
     position: absolute;
@@ -32,8 +32,8 @@
     color: rgba($color_gray, 0.6);
   }
   &__title {
-    font-size: 1.7rem;
-    margin: 1.2rem auto;
+    font-size: 2.2rem;
+    margin: 0.8rem auto;
     text-transform: capitalize;
   }
   &__text {
