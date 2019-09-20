@@ -1,0 +1,18 @@
+@import "../basics/Basics.scss";
+.work {
+  overflow: hidden;
+  &__top {
+    margin: 8rem auto;
+    &__text-box {
+    }
+    &__btn-box {
+      display: flex;
+      align-items: flex-end;
+      height: 100%;
+    }
+  }
+  &__bottom {
+    margin: 3rem;
+    margin-left: 12rem;
+  }
+}

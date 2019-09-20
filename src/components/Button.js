@@ -4,7 +4,8 @@ import "./Button.scss";
 export class Button extends Component {
   render() {
     const styler = {
-      backgroundColor: `#${this.props.backgroundColor}`
+      backgroundColor: `#${this.props.backgroundColor}`,
+      boxShadow: `1px 5px 5px ${this.props.shadow}`
     };
     return (
       <div className="btn">

@@ -3,7 +3,7 @@
   background-image: url(../img/bg--1.svg);
   background-size: cover;
   background-position: bottom;
-  height: 95vh;
+  background-attachment: fixed;
 
   &__inner {
     // display: flex;

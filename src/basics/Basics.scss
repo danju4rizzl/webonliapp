@@ -36,6 +36,24 @@ $size_3: 3rem;
   -webkit-text-fill-color: transparent;
 }
 
+@mixin gradient_background {
+  background: linear-gradient(44.44deg, $color_primary 0%, #215296 97.71%);
+}
+
+@mixin add_border_to_side {
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-190%, -50%);
+    display: block;
+    width: 70%;
+    height: 0.1rem;
+    background: currentColor;
+  }
+}
+
 // #### Typography #####
 .heading {
   &__main {
@@ -57,18 +75,7 @@ $size_3: 3rem;
     display: inline-block;
     color: $color_primary_dark;
 
-    &::before {
-      position: absolute;
-      content: "";
-      top: 50%;
-      left: 50%;
-      transform: translate(-190%, -50%);
-      display: block;
-      width: 70%;
-      height: 0.1rem;
-      background: currentColor;
-    }
-
+    @include add_border_to_side();
     &--about {
       right: -10.5%;
     }
@@ -79,11 +86,12 @@ $size_3: 3rem;
     }
   }
   &__card {
-    font-size: 3.5rem;
-    line-height: 44px;
+    font-size: 2.5rem;
     font-family: $font_sub_1;
     font-weight: bold;
-    line-height: 90px;
+    &--projects {
+      font-size: 1.9rem;
+    }
   }
 }
 
@@ -93,6 +101,12 @@ $size_3: 3rem;
     font-family: $font_main;
     color: $color_gray;
   }
+}
+
+.tag {
+  font-size: 1.2rem;
+  font-style: italic;
+  position: relative;
 }
 
 // ###### sections #########
