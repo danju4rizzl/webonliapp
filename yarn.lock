@@ -8673,6 +8673,11 @@ react-is@^16.8.1, react-is@^16.8.4:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.6.tgz#5bbc1e2d29141c9fbdfed456343fe2bc430a6a16"
   integrity sha512-aUk3bHfZ2bRSVFFbbeVS4i+lNPZr3/WM5jT2J5omUVV1zzcs1nAaf3l51ctA5FFvCRbhrH0bdAsRRQddFJZPtA==
 
+react-multi-carousel@^2.2.6:
+  version "2.2.6"
+  resolved "https://registry.yarnpkg.com/react-multi-carousel/-/react-multi-carousel-2.2.6.tgz#02e4d8f0b67aa4e766ed966a0dac8b4ffe5daedf"
+  integrity sha512-ap+bwX8JaZGhubHVRk4y6j0s8odzAQaQztJ39HJprebT+HzWiV8ibsF+dNl+U847Lj9qCzyfwxSdRUkKHw2dMw==
+
 react-overlays@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/react-overlays/-/react-overlays-1.2.0.tgz#205368eeb0a5fb0b7f9b717fa7a12d518500abdb"
