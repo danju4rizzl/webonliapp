@@ -26,27 +26,6 @@ export const BrandLinks = [
   "Contact"
 ];
 
-export let BoxTextContents = {
-  box1: {
-    boxIndex: 1,
-    title: " agile development",
-    text:
-      "minima maxime alias cupiditate ea reprehenderit. Facere reprehenderit accusamuor."
-  },
-  box2: {
-    boxIndex: 2,
-    title: "FullStack Developers",
-    text:
-      "Leverage agile frameworks to provide a robust synopsis for high level overviews."
-  },
-  box3: {
-    boxIndex: 3,
-    title: "professional  Response",
-    text:
-      "We capitalize on low hanging fruit to identify value added activity to beta test. "
-  }
-};
-
 // SVGs
 export const BrandImages = {
   headerImg: "entrepreneurs.svg"
