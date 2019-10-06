@@ -23,7 +23,11 @@ export default class Header extends Component {
                   <span className="heading__main-sub"> Your Brands</span>
                 </h1>
                 <p className="text__main">{headerText.headerSlug}</p>
-                <Button backgroundColor={BrandColors.colorPrimaryDark} />
+                <Button
+                  backgroundColor={BrandColors.colorPrimaryDark}
+                  color={BrandColors.colorWhite}
+                  title={"Start Here"}
+                />
               </div>
             </Col>
 

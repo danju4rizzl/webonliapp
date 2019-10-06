@@ -5,12 +5,12 @@ $color_primary_dark: #219653;
 
 $color_white: #fff;
 $color_black: #2d2d2d;
-$color_gray: lightslategray;
+$color_gray: rgba($color_black, 0.5);
 
 // #### Font Family  #####
 $font_main: "Lato", sans-serif;
-$font_sub_1: "Quicksand", sans-serif;
-$font_sub_2: "Righteous", cursive;
+$font_sub: "Nunito", sans-serif;
+$font_alt: "Righteous", cursive;
 
 // #### Sizes ######
 $size_1: 1rem;
@@ -57,19 +57,25 @@ $size_3: 3rem;
 // #### Typography #####
 .heading {
   &__main {
-    font-family: $font_sub_1;
+    font-family: $font_sub;
     font-size: 4.5rem;
     font-weight: 800;
+    line-height: 4.5rem;
 
     &-sub {
       color: $color_primary;
       display: block;
+      &--inherited {
+        color: $color_primary;
+        display: inline-block;
+        margin-left: 1rem;
+      }
     }
   }
   &__section {
-    font-family: $font_sub_1;
-    font-size: 1.8rem;
-    font-weight: 600;
+    font-family: $font_main;
+    font-size: 1.6rem;
+    font-weight: 400;
     text-transform: uppercase;
     position: relative;
     display: inline-block;
@@ -87,8 +93,10 @@ $size_3: 3rem;
   }
   &__card {
     font-size: 2.5rem;
-    font-family: $font_sub_1;
+    font-family: $font_sub;
     font-weight: bold;
+    margin: 2.2rem auto;
+
     &--projects {
       font-size: 1.9rem;
     }
@@ -97,7 +105,7 @@ $size_3: 3rem;
 
 .text {
   &__main {
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     font-family: $font_main;
     color: $color_gray;
   }

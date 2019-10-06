@@ -1,3 +1,4 @@
+import React from "react";
 export const headerText = {
   headingText: "Best Design for",
   headerSlug:
@@ -25,8 +26,3 @@ export const BrandLinks = [
   "Blog",
   "Contact"
 ];
-
-// SVGs
-export const BrandImages = {
-  headerImg: "entrepreneurs.svg"
-};

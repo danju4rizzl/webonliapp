@@ -56,7 +56,11 @@ export class Navigation extends Component {
         </div>
 
         <div className="navigation__cta">
-          <Button backgroundColor={BrandColors.colorBlack} />
+          <Button
+            backgroundColor={BrandColors.colorWhite}
+            title="Get a Quote"
+            color={BrandColors.colorPrimary}
+          />
         </div>
       </nav>
     );

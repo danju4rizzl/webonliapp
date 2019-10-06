@@ -12,16 +12,22 @@ export class Price_card extends Component {
     }
   }
 
+  listItem(item) {
+    return item.map(item => <li className="price-card__blob">{item}</li>);
+  }
+
   render() {
     return (
       <div className="price-card">
         <h5 className="price-card__title">{this.props.title}</h5>
         <p className="price-card__price my-3">
-          $<span className="price-card__price--sub"> {this.props.price}</span>
-          /Month
+          R<span className="price-card__price--sub"> {this.props.price}</span>/
+          Month
         </p>
 
-        <p className="price-card__blob">{this.props.blob}</p>
+        <ul className="price-card__list list-unstyled">
+          {this.listItem(this.props.slug)}
+        </ul>
 
         <Button
           title="Buy Now"

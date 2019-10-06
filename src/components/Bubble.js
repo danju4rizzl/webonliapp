@@ -13,7 +13,7 @@ export class Bubble extends Component {
   render() {
     const styler = {
       backgroundColor: this.props.color,
-      boxShadow: `0px 10px 35px ${this.props.color}`
+      boxShadow: `0px 4px 8px ${this.props.color}`
     };
     return (
       <div style={styler} className="bubble">
