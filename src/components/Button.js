@@ -4,7 +4,12 @@ import PropTypes from "prop-types";
 import "./Button.scss";
 
 export class Button extends Component {
-  static propTypes = {};
+  static propTypes = {
+    backgroundColor: PropTypes.string,
+    shadow: PropTypes.string,
+    color: PropTypes.string,
+    title: PropTypes.string
+  };
 
   render() {
     const styler = {

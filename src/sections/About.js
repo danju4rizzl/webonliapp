@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
 import Statistics from "../components/Statistics";
 import { Container, Row, Col } from "react-bootstrap";
-import { BoxTextContents } from "../basics/Basics";
 import Box from "../components/Box";
 import Services from "../sections/Services";
 import ScrollAnimation from "react-animate-on-scroll";
@@ -30,9 +28,9 @@ const boxContents = [
   }
 ];
 
-const boxItem = item => {
+const boxItem = (item, index) => {
   const createdEl = [
-    <ScrollAnimation animateIn="flipInX">
+    <ScrollAnimation animateIn="flipInX" key={index}>
       <Box boxIndex={item.boxIndex} title={item.title} text={item.text} />
     </ScrollAnimation>
   ];
@@ -40,12 +38,8 @@ const boxItem = item => {
 };
 
 export class About extends Component {
-  static propTypes = {};
-
   renderBoxes = () => {
-    const box = boxContents.map(boxItem);
-
-    return box;
+    return boxContents.map(boxItem);
   };
 
   render() {

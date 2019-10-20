@@ -2,18 +2,13 @@ import React, { Component } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Button from "../components/Button";
 import { BrandColors } from "../basics/Basics";
-import ScrollAnimation from "react-animate-on-scroll";
 import Slidz from "../components/Slidz";
 import ReactSVG from "react-svg";
 import WorkImage from "../img/investment.svg";
 
-import PropTypes from "prop-types";
-
 import "./Work.scss";
 
 export class Work extends Component {
-  static propTypes = {};
-
   render() {
     return (
       <div className="work">

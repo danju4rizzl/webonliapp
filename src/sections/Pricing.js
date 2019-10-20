@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
-import { Container, Row, Col, ButtonGroup } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import Button from "../components/Button";
-import { BrandColors, getContent } from "../basics/Basics";
-import Price_card from "../components/Price_card";
+import { BrandColors } from "../basics/Basics";
+import PriceCard from "../components/PriceCard";
+import "./Pricing.scss";
 
 const cardContents = [
   {
@@ -51,15 +51,13 @@ const cardContents = [
 ];
 
 export class Pricing extends Component {
-  static propTypes = {};
-  getSlug(item) {
-    return item.map(item => item);
-  }
+  // Debug getSlug()
+
   renderContents() {
-    const element = cardContents.map(item => {
+    const element = cardContents.map((item, index) => {
       const createdEl = [
-        <Col md={{ span: 3, offset: 1 }}>
-          <Price_card title={item.plan} price={item.price} slug={item.slug} />
+        <Col md={{ span: 4 }} key={index}>
+          <PriceCard title={item.plan} price={item.price} slug={item.slug} />
         </Col>
       ];
 
@@ -86,7 +84,7 @@ export class Pricing extends Component {
                 <Button title="Yearly" color={BrandColors.colorPrimary} />
               </div>
             </div>
-            <Row noGutters={true}>{this.renderContents()}</Row>
+            <Row noGutters={false}>{this.renderContents()}</Row>
           </Container>
         </div>
       </div>

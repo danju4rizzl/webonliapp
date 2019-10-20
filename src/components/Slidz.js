@@ -50,15 +50,15 @@ const responsive = {
 export class Slidz extends Component {
   static propTypes = {
     // Using proptypes as a reminder
-    title: PropTypes.string.isRequired,
+    title: PropTypes.string,
     tag: PropTypes.string
   };
 
   renderSlides = () => {
-    const element = allBoxes.map(item => {
+    const element = allBoxes.map((item, index) => {
       const createdEl = [
-        <div className="slide" key={item.lenght}>
-          <ReactSVG src={item.img} className="slide__img" />
+        <div className="slidz" key={index}>
+          <ReactSVG src={item.img} className="slidz__img" />
           <h5 className="heading__card heading__card--projects">
             {item.title}
           </h5>
@@ -72,8 +72,6 @@ export class Slidz extends Component {
   };
 
   render() {
-    const styler = {};
-
     return (
       <Carousel
         swipeable={false}

@@ -1,11 +1,23 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import Button from "../components/Button";
+import Button from "./Button";
 import { BrandColors } from "../basics/Basics";
-import "./Price_card.scss";
+import "./PriceCard.scss";
 
-export class Price_card extends Component {
-  static propTypes = {};
+export class PriceCard extends Component {
+  static propTypes = {
+    title: PropTypes.string,
+    slug: "Slugs in Map()"
+  };
+  state = {
+    hover: false
+  };
+
+  handleHover = ({ hover }) => {
+    this.setState({ hover: !hover });
+    console.log(hover);
+  };
+
   handleColor() {
     if (this.props.title === "Standard") {
       return BrandColors.colorPrimaryDark;
@@ -13,12 +25,16 @@ export class Price_card extends Component {
   }
 
   listItem(item) {
-    return item.map(item => <li className="price-card__blob">{item}</li>);
+    return item.map((item, index) => (
+      <li className="price-card__blob" key={index}>
+        {item}
+      </li>
+    ));
   }
 
   render() {
     return (
-      <div className="price-card">
+      <div className="price-card" onMouseEnter={this.handleHover}>
         <h5 className="price-card__title">{this.props.title}</h5>
         <p className="price-card__price my-3">
           R<span className="price-card__price--sub"> {this.props.price}</span>/
@@ -39,4 +55,4 @@ export class Price_card extends Component {
   }
 }
 
-export default Price_card;
+export default PriceCard;

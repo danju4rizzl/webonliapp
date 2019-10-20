@@ -3,6 +3,7 @@ import Header from "../sections/Header";
 import About from "../sections/About";
 import Work from "../sections/Work";
 import Pricing from "../sections/Pricing";
+import Feedback from "../sections/Feedback";
 
 export class Homepage extends Component {
   render() {
@@ -11,7 +12,8 @@ export class Homepage extends Component {
         <Header />
         <About />
         <Work />
-        <Pricing/>
+        <Pricing />
+        <Feedback />
       </div>
     );
   }
