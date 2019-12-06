@@ -1,8 +1,8 @@
 import React, { Component } from "react";
+import axios from "axios";
 // import PropTypes from 'prop-types'
 import { Container, Row, Col, Carousel } from "react-bootstrap";
 import Button from "../components/Button";
-
 import { BrandColors } from "../basics/Basics";
 import "./Feedback.scss";
 
@@ -12,9 +12,30 @@ const setting = {
   controls: false
 };
 
-const renderFeedbacks = () => {
+const testimonials = [
+  {
+    clientImg: "dj.img",
+    clientBlob: "The best web design team I am worked with ",
+    clientName: "Mike Jones",
+    clientPosition: "Chife Executive Officer"
+  },
+  {
+    clientImg: "",
+    clientBlob: "The best web development team we am worked with ",
+    clientName: "Jane Jones",
+    clientPosition: "Chife Executive Officer"
+  }
+];
+
+const renderFeedbacks = list => {
   //1. Get user images from an API
   //2. Add images to UI
+  const APIkey = "0db8bde372cd905354ad98e542f05c";
+
+  this.getImages(async () => {
+    const result = await axios("https://uifaces.co/api/?limit=3");
+    console.log(result);
+  });
 };
 
 export default class Feedback extends Component {
@@ -54,8 +75,7 @@ export default class Feedback extends Component {
 
             <Col md={{ span: 5 }}>
               <Carousel {...setting}>
-                {renderFeedbacks}
-                {/* <Carousel.Item >
+                <Carousel.Item>
                   <div className="feedback-card">
                     <div className="feedback-card__img ">
                       <img
@@ -79,7 +99,7 @@ export default class Feedback extends Component {
                       Founder and ceo of Comfixx
                     </p>
                   </div>
-                </Carousel.Item> */}
+                </Carousel.Item>
               </Carousel>
             </Col>
           </Row>

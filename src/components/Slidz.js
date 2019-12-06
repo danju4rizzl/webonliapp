@@ -62,7 +62,7 @@ export class Slidz extends Component {
           <h5 className="heading__card heading__card--projects">
             {item.title}
           </h5>
-          <p className="tag  text-white">{item.tag}</p>
+          <p className="tag  text-white text-center">{item.tag}</p>
         </div>
       ];
 
@@ -75,21 +75,27 @@ export class Slidz extends Component {
     return (
       <Carousel
         swipeable={false}
-        draggable={false}
-        showDots={false}
         arrows={false}
         responsive={responsive}
-        ssr={false} // means to render carousel on server-side.
-        infinite={true}
-        autoPlay={this.props.deviceType !== "mobile" ? true : false}
-        autoPlaySpeed={5000}
+        autoPlay
+        autoPlaySpeed={3000}
         keyBoardControl={false}
-        customTransition="all .5"
         transitionDuration={500}
-        containerClass="carousel-container"
         removeArrowOnDeviceType={["tablet", "mobile"]}
         deviceType={this.props.deviceType}
+        additionalTransfrom={0}
         centerMode={true}
+        className=""
+        containerClass="container-with-dots"
+        dotListClass=""
+        draggable
+        focusOnSelect={false}
+        infinite
+        itemClass=""
+        minimumTouchDrag={30}
+        renderButtonGroupOutside={false}
+        renderDotsOutside={false}
+        slidesToSlide={2}
       >
         {this.renderSlides()}
       </Carousel>
