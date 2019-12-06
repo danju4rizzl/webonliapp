@@ -1,0 +1,46 @@
+@import "../basics/Basics.scss";
+
+.price-card {
+  padding: 4rem;
+  margin: 3rem auto;
+  // width: 70%;
+
+  text-align: center;
+  border: 1px solid rgba($color_gray, 0.1);
+  box-shadow: 0 8px 6px -6px $color_gray;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 8px 16px -6px $color_gray;
+    transform: translateY(-3px);
+    .price-card__price--sub {
+      color: $color_primary;
+    }
+  }
+
+  &__title {
+    font-size: 2rem;
+    color: $color_gray;
+  }
+  &__price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: $font_sub;
+
+    &--sub {
+      font-size: 3.2rem;
+    }
+  }
+
+  &__list {
+    & > :nth-child(odd) {
+      background: rgba($color_primary_light, 0.1);
+    }
+  }
+  &__blob {
+    font-size: $size_2;
+    font-family: $font_sub;
+    margin: 0.5rem auto;
+    text-transform: capitalize;
+  }
+}

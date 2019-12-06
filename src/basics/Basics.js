@@ -1,5 +1,5 @@
 export const headerText = {
-  headingText: "Best Design for Your Brands",
+  headingText: "Best Design for",
   headerSlug:
     " Lorem ipsum dolor sit amet consectetur adipisicing eli amet consectetur adipisicing eli amet consectetur adipisicing elit"
 };

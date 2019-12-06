@@ -1,0 +1,46 @@
+@import "../basics/Basics.scss";
+
+.feedback {
+  margin: 5rem auto;
+  &-card {
+    max-width: 70%;
+    padding: 3rem;
+    display: grid;
+    justify-items: center;
+
+    box-shadow: 1px 1px 10px rgba($color_black, 0.2);
+    border-top-left-radius: 50px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 5px;
+
+    &__img,
+    &__img > img {
+      // this will create a border radius for the img and its parent
+      border-radius: 100px;
+    }
+
+    &__img {
+      max-width: 7rem;
+      max-height: 7rem;
+      background: #f3f3f3;
+      box-shadow: 1px 8px 22px rgba(#219653, 0.8);
+
+      & img {
+        //   border-radius: 100px;
+      }
+    }
+
+    &__slug {
+      font-size: 1.5rem;
+      color: #888;
+      font-style: italic;
+    }
+    &__name {
+      font-size: 1.8rem;
+      font-family: $font_sub;
+
+      color: $color_primary;
+    }
+  }
+}

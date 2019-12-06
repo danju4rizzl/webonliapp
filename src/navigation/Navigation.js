@@ -17,16 +17,10 @@ export class Navigation extends Component {
 
   // ###### Render out links with a loop ######
   renderLinks = () => {
-    const links = BrandLinks.map(link => {
+    const links = BrandLinks.map((link, index) => {
       const list = [
-        <li key={link}>
-          <a
-            href="#"
-            onClick={this.toggleClick()}
-            ref={el => {
-              el === "Home" ? console.log(el) : console.log(`not ${el}`);
-            }}
-          >
+        <li key={index}>
+          <a href="/" onClick={this.toggleClick}>
             {link}
           </a>
         </li>
@@ -56,7 +50,11 @@ export class Navigation extends Component {
         </div>
 
         <div className="navigation__cta">
-          <Button backgroundColor={BrandColors.colorBlack} />
+          <Button
+            backgroundColor={BrandColors.colorWhite}
+            title="Get a Quote"
+            color={BrandColors.colorPrimary}
+          />
         </div>
       </nav>
     );

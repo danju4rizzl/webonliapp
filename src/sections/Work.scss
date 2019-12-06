@@ -1,0 +1,33 @@
+@import "../basics/Basics.scss";
+.work {
+  overflow: hidden;
+
+  &__top {
+    margin: 8rem auto;
+    &__text-box {
+    }
+    &__btn-box {
+      display: flex;
+      align-items: flex-end;
+      height: 100%;
+    }
+  }
+  &__middle {
+    margin: 3rem;
+    margin-left: 12rem;
+  }
+  &__bottom {
+    margin: 10rem auto;
+
+    & svg {
+      min-width: 40rem;
+      max-width: 60rem;
+      height: 35rem;
+    }
+    &--right {
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+  }
+}

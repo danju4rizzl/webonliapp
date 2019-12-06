@@ -32,14 +32,20 @@
     }
 
     & ul > li:not(:last-child) {
-      margin-right: 4.5rem;
+      margin-right: 2.5rem;
+    }
+    & ul > li:first-child {
     }
     & > ul > li > a {
       font-size: 1.4rem;
       color: $color_primary;
+      font-family: $font_sub;
+      &::after {
+        content: "-";
+      }
 
       .active {
-        font-weight: 500;
+        font-weight: 600;
       }
     }
   }

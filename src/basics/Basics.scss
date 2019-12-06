@@ -3,13 +3,14 @@ $color_primary: #27ae60;
 $color_primary_light: #6fcf97;
 $color_primary_dark: #219653;
 
-$color_white: #f2f2f2;
+$color_white: #fff;
 $color_black: #2d2d2d;
+$color_gray: rgba($color_black, 0.5);
 
 // #### Font Family  #####
 $font_main: "Lato", sans-serif;
-$font_sub_1: "Quicksand", sans-serif;
-$font_sub_2: "Righteous", cursive;
+$font_sub: "Nunito", sans-serif;
+$font_alt: "Righteous", cursive;
 
 // #### Sizes ######
 $size_1: 1rem;
@@ -35,44 +36,85 @@ $size_3: 3rem;
   -webkit-text-fill-color: transparent;
 }
 
+@mixin gradient_background {
+  background: linear-gradient(44.44deg, $color_primary 0%, #215296 97.71%);
+}
+
+@mixin add_border_to_side {
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-190%, -50%);
+    display: block;
+    width: 70%;
+    height: 0.1rem;
+    background: currentColor;
+  }
+}
+
 // #### Typography #####
 .heading {
   &__main {
-    font-family: $font_sub_1;
-    font-size: 4rem;
+    font-family: $font_sub;
+    font-size: 4.5rem;
     font-weight: 800;
-    color: $color_primary_dark;
+    line-height: 4.5rem;
+
+    &-sub {
+      color: $color_primary;
+      display: block;
+      &--inherited {
+        color: $color_primary;
+        display: inline-block;
+        margin-left: 1rem;
+      }
+    }
   }
   &__section {
-    font-family: $font_sub_1;
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-family: $font_main;
+    font-size: 1.6rem;
+    font-weight: 400;
     text-transform: uppercase;
     position: relative;
     display: inline-block;
-    right: -10.5%;
     color: $color_primary_dark;
 
-    &::before {
-      position: absolute;
-      content: "";
-      top: 50%;
-      left: 50%;
-      transform: translate(-250%, -50%);
-      display: block;
-      width: 70%;
-      height: 0.1rem;
-      background: currentColor;
+    @include add_border_to_side();
+    &--about {
+      right: -10.5%;
+    }
+    &--services {
+      &::before {
+        display: none;
+      }
+    }
+  }
+  &__card {
+    font-size: 2.5rem;
+    font-family: $font_sub;
+    font-weight: bold;
+    margin: 2.2rem auto;
+
+    &--projects {
+      font-size: 1.9rem;
     }
   }
 }
 
 .text {
   &__main {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-family: $font_main;
-    color: lightslategray;
+    color: $color_gray;
   }
+}
+
+.tag {
+  font-size: 1.2rem;
+  font-style: italic;
+  position: relative;
 }
 
 // ###### sections #########

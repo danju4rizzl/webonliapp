@@ -18,9 +18,16 @@ export default class Header extends Component {
           <Row className="header__inner">
             <Col lg={6}>
               <div className="header__inner-left">
-                <h1 className="heading__main">{headerText.headingText}</h1>
+                <h1 className="heading__main">
+                  {headerText.headingText}
+                  <span className="heading__main-sub"> Your Brands</span>
+                </h1>
                 <p className="text__main">{headerText.headerSlug}</p>
-                <Button backgroundColor={BrandColors.colorPrimaryDark} />
+                <Button
+                  backgroundColor={BrandColors.colorPrimaryDark}
+                  color={BrandColors.colorWhite}
+                  title={"Start Here"}
+                />
               </div>
             </Col>
 
