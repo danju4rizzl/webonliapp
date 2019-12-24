@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import axios from "axios";
+import React, { Component } from 'react';
+import axios from 'axios';
 // import PropTypes from 'prop-types'
-import { Container, Row, Col, Carousel } from "react-bootstrap";
-import Button from "../components/Button";
-import { BrandColors } from "../basics/Basics";
-import "./Feedback.scss";
+import { Container, Row, Col, Carousel } from 'react-bootstrap';
+import Button from '../components/Button';
+import { BrandColors } from '../basics/Basics';
+import './Feedback.scss';
 
 const setting = {
   fade: true,
@@ -14,26 +14,26 @@ const setting = {
 
 const testimonials = [
   {
-    clientImg: "dj.img",
-    clientBlob: "The best web design team I am worked with ",
-    clientName: "Mike Jones",
-    clientPosition: "Chife Executive Officer"
+    clientImg: 'dj.img',
+    clientBlob: 'The best web design team I am worked with ',
+    clientName: 'Mike Jones',
+    clientPosition: 'Chife Executive Officer'
   },
   {
-    clientImg: "",
-    clientBlob: "The best web development team we am worked with ",
-    clientName: "Jane Jones",
-    clientPosition: "Chife Executive Officer"
+    clientImg: 'dj.img',
+    clientBlob: 'The best web development team we am worked with ',
+    clientName: 'Jane Jones',
+    clientPosition: 'Chife Executive Officer'
   }
 ];
 
 const renderFeedbacks = list => {
   //1. Get user images from an API
   //2. Add images to UI
-  const APIkey = "0db8bde372cd905354ad98e542f05c";
+  const APIkey = '0db8bde372cd905354ad98e542f05c';
 
   this.getImages(async () => {
-    const result = await axios("https://uifaces.co/api/?limit=3");
+    const result = await axios('https://uifaces.co/api/?limit=3');
     console.log(result);
   });
 };
@@ -81,7 +81,7 @@ export default class Feedback extends Component {
                       <img
                         src="dj.jpg"
                         alt="Danjuma Ashiwaju"
-                        srcset=""
+                        srcSet=""
                         className="img-fluid "
                       />
                     </div>
@@ -93,7 +93,7 @@ export default class Feedback extends Component {
                     </p>
 
                     <h5 className="feedback-card__name font-weight-bold ">
-                      Danjuma Ahiwaju
+                      Danjuma Y Ashiwaju
                     </h5>
                     <p className="text__main my-2">
                       Founder and ceo of Comfixx

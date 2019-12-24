@@ -1,13 +1,13 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import Button from "./Button";
-import { BrandColors } from "../basics/Basics";
-import "./PriceCard.scss";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import Button from './Button';
+import { BrandColors } from '../basics/Basics';
+import './PriceCard.scss';
 
 export class PriceCard extends Component {
   static propTypes = {
     title: PropTypes.string,
-    slug: PropTypes.func
+    slug: PropTypes.array
   };
   state = {
     hover: false
@@ -19,7 +19,7 @@ export class PriceCard extends Component {
   };
 
   handleColor() {
-    if (this.props.title === "Standard") {
+    if (this.props.title === 'Standard') {
       return BrandColors.colorPrimaryDark;
     }
   }
