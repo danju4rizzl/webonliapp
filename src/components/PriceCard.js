@@ -7,7 +7,7 @@ import "./PriceCard.scss";
 export class PriceCard extends Component {
   static propTypes = {
     title: PropTypes.string,
-    slug: "Slugs in Map()"
+    slug: PropTypes.func
   };
   state = {
     hover: false
