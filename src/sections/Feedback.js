@@ -85,7 +85,7 @@ export default class Feedback extends Component {
       <div className="feedback">
         <Container>
           <Row>
-            <Col md={{ span: 5, offset: 2 }}>
+            <Col className="feedback__content" md={{ span: 5, offset: 2 }}>
               <h2 className="heading__section heading__section-- ">Feedback</h2>
               <div className="about__inner-right">
                 <h1 className="heading__main">

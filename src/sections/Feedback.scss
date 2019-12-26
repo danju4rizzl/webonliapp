@@ -2,14 +2,16 @@
 
 .feedback {
   margin: 5rem auto;
-
+  &__content {
+    align-self: center;
+  }
   &-card {
     max-width: 70%;
     // padding: 3rem 1.5rem;
     display: grid;
     justify-items: center;
     grid-gap: 0.5rem;
-    box-shadow: 1px 1px 20px rgba($color_black, 0.2);
+    box-shadow: 1px 1px 10px rgba($color_black, 0.3);
     border-top-left-radius: 50px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 50px;
