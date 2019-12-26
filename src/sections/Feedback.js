@@ -12,24 +12,42 @@ const setting = {
   controls: false
 };
 
+// const APIkey = '0db8bde372cd905354ad98e542f05c';
 const testimonials = [
   {
-    clientImg: 'https://randomuser.me/api/portraits/men/32.jpg',
-    clientBlob: 'The best web design team I am worked with ',
-    clientName: 'Mike Jones',
-    clientPosition: 'Chife Executive Officer'
+    photo: 'https://randomuser.me/api/portraits/men/32.jpg',
+    blob:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis iusto animi quos non dolore omnis, magni fugit tenetur voluptatum accusamus!',
+    name: 'Leo Gill',
+    position: 'Chife Executive Officer'
   },
   {
-    clientImg: 'https://randomuser.me/api/portraits/women/44.jpg',
-    clientBlob: 'The team we love ',
-    clientName: 'Jane Jones',
-    clientPosition: 'Manager'
+    photo: 'https://randomuser.me/api/portraits/women/44.jpg',
+    blob:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis iusto animi quos non dolore omnis, magni fugit tenetur voluptatum accusamus!',
+    name: 'Lana Steiner',
+    position: 'Manager'
+  },
+  {
+    photo: 'https://randomuser.me/api/portraits/men/4.jpg',
+    blob:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores odit maxime illum veritatis facere illo excepturi nam suscipit molestias rerum. Unde dolor nisi facere deserunt recusandae voluptatem cumque possimus quidem?',
+    name: 'Aaron Nunez',
+    position: 'Manager'
   }
 ];
-const APIkey = '0db8bde372cd905354ad98e542f05c';
+
+const getUsers = () => {
+  // Make a request for a user with a given ID
+  axios
+    .get('https://uifaces.co/api')
+    .then(res => console.log(res))
+    .catch(err => console.error(err));
+};
 
 const renderFeedbacks = () => {
   //1. Get user images from an API
+  getUsers();
   //2. Add images to UI
   const element = testimonials.map((item, index) => {
     //
@@ -38,60 +56,22 @@ const renderFeedbacks = () => {
         <div className="feedback-card">
           <div className="feedback-card__img ">
             <img
-              src={item.clientImg}
-              alt={item.clientName}
-              srcSet={item.clientImg}
+              src={item.photo}
+              alt={item.name}
+              srcSet={item.photo}
               className="img-fluid "
             />
           </div>
 
-          <p className="feedback-card__slug text-center my-5">
-            {item.clientBlob}
-          </p>
+          <p className="feedback-card__slug text-center my-5">{item.blob}</p>
 
-          <h5 className="feedback-card__name font-weight-bold ">
-            {item.clientName}
-          </h5>
-          <p className="text__main my-2">{item.clientPosition}</p>
+          <h5 className="feedback-card__name font-weight-bold ">{item.name}</h5>
+          <p className="text__main my-2">{item.position}</p>
         </div>
       </Carousel.Item>
     ];
     return TestCard;
   });
-
-  // API
-  /*
-  this.getImages(async () => {
-    const result = await axios(`https://uifaces.co/api/?limit=3${APIkey}`);
-    console.log(result);
-  });
-  
-  const dataObj = fetch('https://jsonplaceholder.typicode.com/todos/1', {
-    method: 'GET',
-    headers: {
-      'X-API-KEY': [APIkey],
-      Accept: 'application/json',
-      'Cache-Control': 'no-cache'
-    }
-  })
-  .then(response => response.json())
-  .then(json => console.log(json));
-  */
-
-  // Make a request for a user with a given ID
-  axios
-    .get('https://jsonplaceholder.typicode.com/todos/1')
-    .then(function(response) {
-      // handle success
-      console.log(response);
-    })
-    .catch(function(error) {
-      // handle error
-      console.log(error);
-    })
-    .finally(function() {
-      // always executed
-    });
 
   return element;
 };
