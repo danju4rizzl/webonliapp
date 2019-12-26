@@ -7,7 +7,6 @@ import './Feedback.scss';
 
 const axios = require('axios').default;
 const setting = {
-  fade: true,
   indicators: false,
   controls: false
 };
@@ -31,7 +30,7 @@ const testimonials = [
   {
     photo: 'https://randomuser.me/api/portraits/men/4.jpg',
     blob:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores odit maxime illum veritatis facere illo excepturi nam suscipit molestias rerum. Unde dolor nisi facere deserunt recusandae voluptatem cumque possimus quidem?',
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores odit maxime illum veritatis facere illo excepturi nam suscipit molestias rerum. ',
     name: 'Aaron Nunez',
     position: 'Manager'
   }
